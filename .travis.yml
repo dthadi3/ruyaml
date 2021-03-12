@@ -32,4 +32,4 @@ install:
 cache: pylint
 script:
   - tox
-  - pytest --pylint
+  - tox -e linters
