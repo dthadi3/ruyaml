@@ -9,6 +9,8 @@ matrix:
       env: TOXENV=py38
     - python: 3.9
       env: TOXENV=py39
+    - python: 3.8
+      env: linters
 #Added power jobs    
     - python: 3.6
       env: TOXENV=py36
@@ -22,7 +24,9 @@ matrix:
     - python: 3.9
       env: TOXENV=py39
       arch: ppc64le
-
+    - python: 3.8
+      env: linters
+      arch: ppc64le
 install:
   - pip install --upgrade tox
 script:
