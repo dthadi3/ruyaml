@@ -5,12 +5,12 @@ matrix:
 #      env: TOXENV=py36
 #    - python: 3.7
 #      env: TOXENV=py37
-    - python: 3.8
-      env: TOXENV=py38
+#    - python: 3.8
+#      env: TOXENV=py38
 #    - python: 3.9
 #      env: TOXENV=py39
-#    - env: TOXENV=linters
-#      python -m tox
+    - env: TOXENV=linters
+      script: python -m tox
 #Added power jobs    
 #    - python: 3.6
 #      env: TOXENV=py36
@@ -18,17 +18,16 @@ matrix:
 #    - python: 3.7
 #      env: TOXENV=py37
 #      arch: ppc64le
-    - python: 3.8
-      env: TOXENV=py38
-      arch: ppc64le
+#    - python: 3.8
+#      env: TOXENV=py38
+#      arch: ppc64le
 #    - python: 3.9
 #      env: TOXENV=py39
 #      arch: ppc64le
-#    - env: TOXENV=linters
-#      python: python -m tox
-#      arch: ppc64le
+    - env: TOXENV=linters
+      script: python -m tox
+      arch: ppc64le
 install:
   - pip install --upgrade tox
 script:
   - tox
-  - python -m tox
